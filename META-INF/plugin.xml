@@ -1,0 +1,26 @@
+<idea-plugin version="2">
+    <id>com.mycila.intellij.plugin.gmavenplus</id>
+    <name>GMavenPlus IntelliJ Plugin</name>
+    <version>1.0</version>
+    <vendor email="mathieu.carbou@gmail.com" url="https://github.com/mycila/gmavenplus-intellij-plugin">Mycila
+    </vendor>
+
+    <description><![CDATA[
+      Activates Groovy plugin in Intellij IDEA when the GMavenPlus plugin is present in the pom.
+      This adds the Groovy directories (src/main/groovy and src/test/groovy) to the IDEA build.
+      Inspired from Eclipse Groovy Compiler Plugin at https://github.com/rvowles/eclipsemavengroovy-idea.
+      ]]></description>
+
+    <change-notes><![CDATA[
+      Initial Release.
+      ]]>
+    </change-notes>
+
+    <depends>org.intellij.groovy</depends>
+    <depends>org.jetbrains.idea.maven</depends>
+
+    <idea-version since-build="123.169"/>
+    <extensions defaultExtensionNs="org">
+        <jetbrains.idea.maven.importer implementation="com.mycila.intellij.plugin.gmavenplus.GMavenPlusgroovyImporter"/>
+    </extensions>
+</idea-plugin>
